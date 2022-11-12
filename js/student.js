@@ -24,6 +24,7 @@ let cnicNumber = document.getElementById('cnicNumber')
 let courseName = document.getElementById('courseName')
 let studentImage = document.getElementById('studentImage')
 let studentSubmitBtn = document.getElementById('studentSubmit')
+let assignClass = document.getElementById('assignClass')
 
 // async function studentData() {
 //     await addDoc(collection(db, "students"), {
@@ -58,6 +59,7 @@ function front() {
             <li>${doc.data().rollNo}</li>
             <li>${doc.data().contact}</li>
             <li>${doc.data().cnic}</li>
+            <li>${doc.data().assignClass}</li>
             <li>${doc.data().coursename}</li>
             <i class="fa-solid fa-pen-to-square" onclick="updateCourse('${
                 doc.id
@@ -93,6 +95,7 @@ async function uploadPic() {
             contact: contactNumber.value,
             cnic: cnicNumber.value,
             coursename: courseName.value,
+            assignClass: assignClass.value,
             iMage: userImageUrl,
         })
     studentName.value = ''
@@ -106,7 +109,10 @@ async function uploadPic() {
     console.log(e)
   }
 }
-studentSubmitBtn.addEventListener('click', uploadPic)
+if (studentSubmitBtn) {
+    studentSubmitBtn.addEventListener('click', uploadPic)
+}
+    
 
 // async function uploadPic(user) {
 //   let file = studentImage.files[0]

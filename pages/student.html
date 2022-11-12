@@ -31,10 +31,10 @@
           </a>
           <!-- Nav Links -->
           <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-            <li><a class="hover:text-gray-200 text-[20px] text-[#8dc63f]" href="../pages/admin.html">Classes</a></li>
-            <li><a class="hover:text-gray-200 text-[20px]" href="#">Courses</a></li>
+            <li><a class="hover:text-gray-200 text-[20px]" href="../pages/admin.html">Classes</a></li>
+            <li><a class="hover:text-gray-200 text-[20px]" href="../pages/course.html">Courses</a></li>
             <li><a class="hover:text-gray-200 text-[20px]" href="../pages/attendance.html">Attendance</a></li>
-            <li><a class="hover:text-gray-200 text-[20px]" href="../pages/student.html">Student</a></li>
+            <li><a class="hover:text-gray-200 text-[20px]  text-[#8dc63f]" href="../pages/student.html">Student</a></li>
           </ul>
           <!-- Header Icons -->
           <div class="lg-flex md:flex xl:flex items-center space-x-5" id="dev">
@@ -67,7 +67,7 @@
     <div class="pages">
         <ul>
             <li><a href="../pages/admin.html">Classes</a></li>
-            <li><a href="#">Courses</a></li>
+            <li><a href="../pages/course.html">Courses</a></li>
             <li><a href="../pages/attendance.html">Attendance</a></li>
             <li><a href="../pages/student.html">Student</a></li>
             <li><a href="#">Contact</a></li>
@@ -86,12 +86,13 @@
 
 <div class="class">
   <ul class="course-heading">
-      <li>Course Name</li>
-      <li>Tutor</li>
-      <li>Timing</li>
-      <li>Schedule</li>
-      <li>Section</li>
-      <li>Batch</li>
+      <li>Student</li>
+      <li>Father</li>
+      <li>Roll No</li>
+      <li>Contact</li>
+      <li>CNIC</li>
+      <li>Assign Class</li>
+      <li>Course</li>
   </ul>
   <div id="student-section">
 </div>
@@ -109,23 +110,35 @@
                 </div>
                 <label for="email2" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Father Name</label>
                 <div class="relative mb-[5px]">
-                    <input id="fatherName" class=" text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Tutor Name" type="text"/>
+                    <input id="fatherName" class=" text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Father Name" type="text"/>
                 </div>
                 <label for="expiry" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Roll Number</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="rollNumber" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="time" type="text"/>
+                    <input id="rollNumber" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Roll Number" type="text"/>
                 </div>
                 <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Contact Number</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="contactNumber" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Section Name" />
+                    <input id="contactNumber" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Contact Number" type="number"/>
                 </div>
                 <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Cnic Number</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="cnicNumber" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Batch Number" />
+                    <input id="cnicNumber" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Cnic Number" type="number"/>
                 </div>
                 <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Course Name</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="courseName" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="schedule of classes" type="text"/>
+                  <select name="sirs" class="w-[100%] border h-[40px]" id="courseName">
+                    <option value="Web and Mobile Development">Web and Mobile Development</option>
+                    <option value="Graphic Designing">Graphic Designing</option>
+                    <option value="CCN">CCN</option>
+                    </select>
+                </div>
+                <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Assign Name</label>
+                <div class="relative mb-[5px] mt-[5px]">
+                  <select name="sirs" class="w-[100%] border h-[40px]" id="assignClass">
+                    <option value="Sir ghous">Sir Ghous</option>
+                    <option value="Sir kashif">Sir Kashif</option>
+                    <option value="Sir haider">Sir Haider</option>
+                    </select>
                 </div>
                 <div class="relative mb-[5px] mt-[20px]">
                   <input id="studentImage" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="schedule of classes" type="file" accept=".png"/>
