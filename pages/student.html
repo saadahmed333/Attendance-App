@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/admin.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/134a07895a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -17,21 +17,28 @@
     
     
 
+      <!-- component -->
+<!-- follow me on twitter @asad_codes -->
 
 <div class="flex flex-wrap  w-[100%]">
     <section class="relative">
+        <!-- navbar -->
       <nav class="flex justify-between bg-white  drop-shadow text-black font-bold w-screen">
         <div class="px-5 xl:px-12 py-6 flex w-full items-center">
           <a class="text-3xl font-bold font-heading text-[#8dc63f]" href="#">
+            <!-- <img class="h-9" src="logo.png" alt="logo"> -->
             Admin
           </a>
+          <!-- Nav Links -->
           <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-            <li><a class="hover:text-gray-200 text-[20px] text-[#8dc63f]" href="#">Classes</a></li>
+            <li><a class="hover:text-gray-200 text-[20px] text-[#8dc63f]" href="../pages/admin.html">Classes</a></li>
             <li><a class="hover:text-gray-200 text-[20px]" href="#">Courses</a></li>
             <li><a class="hover:text-gray-200 text-[20px]" href="../pages/attendance.html">Attendance</a></li>
             <li><a class="hover:text-gray-200 text-[20px]" href="../pages/student.html">Student</a></li>
           </ul>
+          <!-- Header Icons -->
           <div class="lg-flex md:flex xl:flex items-center space-x-5" id="dev">
+            <!-- Sign In / Register      -->
             <a class="flex items-center hover:text-gray-200" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -59,7 +66,7 @@
     </div>
     <div class="pages">
         <ul>
-            <li><a href="#">Classes</a></li>
+            <li><a href="../pages/admin.html">Classes</a></li>
             <li><a href="#">Courses</a></li>
             <li><a href="../pages/attendance.html">Attendance</a></li>
             <li><a href="../pages/student.html">Student</a></li>
@@ -72,21 +79,22 @@
     </div>
   </div>
 
-<div class="add-class">
-    <button onclick="modalHandler(true)">Add Class</button>
+
+  <div class="add-class">
+    <button onclick="modalHandler(true)">Add Student</button>
 </div>
 
 <div class="class">
-      <ul class="course-heading">
-          <li>Course Name</li>
-          <li>Tutor</li>
-          <li>Timing</li>
-          <li>Schedule</li>
-          <li>Section</li>
-          <li>Batch</li>
-      </ul>
-      <div id="course-section">
-    </div>
+  <ul class="course-heading">
+      <li>Course Name</li>
+      <li>Tutor</li>
+      <li>Timing</li>
+      <li>Schedule</li>
+      <li>Section</li>
+      <li>Batch</li>
+  </ul>
+  <div id="student-section">
+</div>
 </div>
 
 <dh-component>
@@ -94,33 +102,36 @@
     <div class="py-12 hidden w-[100%] transition duration-150 ease-in-out z-10 absolute top-0 right-1 bottom-0 left-0" id="modal">
         <div role="alert" class="container mx-auto w-11/12 md:w-2/3 max-w-lg">
             <div class="relative py-8 px-5 md:px-10 bg-white shadow-md rounded border border-gray-400">
-                <h1 class="text-black text-[20px] font-lg font-bold tracking-normal leading-tight mb-4 text-center">Add Class</h1>
-                <label for="name" class="text-gray-800 text-[18px] font-bold leading-tight tracking-normal">Course Name</label>
+                <h1 class="text-black text-[20px] font-lg font-bold tracking-normal leading-tight mb-4 text-center">Add Student</h1>
+                <label for="name" class="text-gray-800 text-[18px] font-bold leading-tight tracking-normal">Name</label>
                 <div class="relative">
-                <input id="courseName" class="mb-[5px] text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Saad" type="text" />
+                <input id="studentName" class="mb-[5px] text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Saad" type="text" />
                 </div>
-                <label for="email2" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Tutor</label>
+                <label for="email2" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Father Name</label>
                 <div class="relative mb-[5px]">
-                    <input id="tutorName" class=" text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Tutor Name" type="text"/>
+                    <input id="fatherName" class=" text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Tutor Name" type="text"/>
                 </div>
-                <label for="expiry" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Timing</label>
+                <label for="expiry" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Roll Number</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="timing" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="time" type="text"/>
+                    <input id="rollNumber" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="time" type="text"/>
                 </div>
-                <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Section Name</label>
+                <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Contact Number</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="sectionName" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Section Name" />
+                    <input id="contactNumber" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Section Name" />
                 </div>
-                <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Batch Number</label>
+                <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Cnic Number</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="BatchNumber" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Batch Number" />
+                    <input id="cnicNumber" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Batch Number" />
                 </div>
-                <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Schedule Of Classes</label>
+                <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Course Name</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="scheduleClass" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="schedule of classes" type="text"/>
+                    <input id="courseName" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="schedule of classes" type="text"/>
                 </div>
+                <div class="relative mb-[5px] mt-[20px]">
+                  <input id="studentImage" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="schedule of classes" type="file"/>
+              </div>
                 <div class="flex items-center justify-start w-full mt-[20px]">
-                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm" id="submit">Submit</button>
+                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm" id="studentSubmit">Submit</button>
                     <button class="focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm" onclick="modalHandler()">Cancel</button>
                 </div>
                 <button class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600" onclick="modalHandler()" aria-label="close modal" role="button">
@@ -167,13 +178,10 @@
     </script>
     
 </dh-component>
-<!-- Code block ends -->
-  
 
-<div class="modals">
 
-</div>
+  <script src="../js/admin.js" type="module"></script>
+  <script src="../js/student.js" type="module"></script>
 
-<script src="../js/admin.js" type="module"></script>
 </body>
 </html>
