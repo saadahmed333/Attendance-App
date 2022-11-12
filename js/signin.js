@@ -32,6 +32,9 @@ function signIn() {
   }
 }
 
-signinBtn.addEventListener("click", signIn)
+if (signinBtn) {
+  signinBtn.addEventListener("click", signIn)
+}
+
 
 

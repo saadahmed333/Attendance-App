@@ -44,7 +44,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             </a>
-            <button class="logout-Btn ml-[20px]">Logout</button>
+            <button class="logout-Btn ml-[20px] log-out">Logout</button>
           </div>
 
         </div>
@@ -70,12 +70,10 @@
             <li><a href="../pages/course.html">Courses</a></li>
             <li><a href="../pages/attendance.html">Attendance</a></li>
             <li><a href="../pages/student.html">Student</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
         </ul>
     </div>
     <div class="log-button">
-        <button>Log Out</button>
+        <button class="log-outt">Log Out</button>
     </div>
   </div>
 
@@ -84,19 +82,37 @@
     <button onclick="modalHandler(true)">Add Student</button>
 </div>
 
-<div class="class">
-  <ul class="course-heading">
-      <li>Student</li>
-      <li>Father</li>
-      <li>Roll No</li>
-      <li>Contact</li>
-      <li>CNIC</li>
-      <li>Assign Class</li>
-      <li>Course</li>
-  </ul>
-  <div id="student-section">
-</div>
-</div>
+
+<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <tr>
+      
+      <th scope="col" class="px-6 py-3">
+        Student name
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Father Name
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Roll Number
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Contact
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Cnic
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Assign Class
+      </th>
+      <th scope="col" class="px-6 py-3">
+        Course Name
+      </th>
+    </tr>
+  </thead>
+  <tbody id="st-tbody">     
+  </tbody>
+</table>
 
 <dh-component>
             
@@ -106,7 +122,7 @@
                 <h1 class="text-black text-[20px] font-lg font-bold tracking-normal leading-tight mb-4 text-center">Add Student</h1>
                 <label for="name" class="text-gray-800 text-[18px] font-bold leading-tight tracking-normal">Name</label>
                 <div class="relative">
-                <input id="studentName" class="mb-[5px] text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Saad" type="text" />
+                <input id="studentName" class="mb-[5px] text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Name" type="text" />
                 </div>
                 <label for="email2" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Father Name</label>
                 <div class="relative mb-[5px]">
@@ -114,7 +130,7 @@
                 </div>
                 <label for="expiry" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Roll Number</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="rollNumber" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Roll Number" type="text"/>
+                    <input id="rollNumber" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Roll Number" type="number"/>
                 </div>
                 <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Contact Number</label>
                 <div class="relative mb-[5px] mt-[5px]">
@@ -192,9 +208,9 @@
     
 </dh-component>
 
-
+<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
   <script src="../js/admin.js" type="module"></script>
   <script src="../js/student.js" type="module"></script>
-
+  <script src="../js/logout.js" type="module"></script>
 </body>
 </html>
