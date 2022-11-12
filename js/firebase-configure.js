@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
-import { collection, query, where, onSnapshot, getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+import { collection, query, where, onSnapshot, getFirestore, addDoc, doc,deleteDoc } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 const firebaseConfig = {
@@ -16,5 +16,5 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore();
 export const auth = getAuth(app);
 export {signInWithEmailAndPassword}
-export {onSnapshot,collection, query, where,}
+export {onSnapshot,collection, query, where, addDoc ,doc ,deleteDoc}
 

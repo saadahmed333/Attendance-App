@@ -101,6 +101,42 @@ td {
     padding: 10px;
     font-weight: 600;
 }
+.table {
+    display: block;
+    position: relative;
+}
+.class {
+    background-color: #efefef;
+}
+.fa-solid {
+    padding-right: 10px;
+    cursor: pointer;
+}
+.course-heading {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+.course-heading li {
+    margin-right: 5px;
+    width: 200px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 22px;
+}
+.course-section {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10px;
+    align-items: center;
+}
+.course-section li {
+    margin-right: 5px;
+    width: 200px;
+    text-align: left;
+    font-size: 20px;
+}
+
 @media only screen and (max-width: 768px) {
     #burger {
         display: block;
