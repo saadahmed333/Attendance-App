@@ -149,4 +149,7 @@ td {
     #dev {
         display: none;
     }
+    .side {
+        width: 300px;
+    }
 }
