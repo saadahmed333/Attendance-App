@@ -73,19 +73,7 @@
 <div class="add-class">
     <button onclick="modalHandler(true)">Add Class</button>
 </div>
-<!-- 
-<div class="class">
-      <ul class="course-heading">
-          <li>Course Name</li>
-          <li>Tutor</li>
-          <li>Timing</li>
-          <li>Schedule</li>
-          <li>Section</li>
-          <li>Batch</li>
-      </ul>
-      <div id="course-section">
-    </div>
-</div> -->
+
 
 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -123,30 +111,58 @@
                 <h1 class="text-black text-[20px] font-lg font-bold tracking-normal leading-tight mb-4 text-center">Add Class</h1>
                 <label for="name" class="text-gray-800 text-[18px] font-bold leading-tight tracking-normal">Course Name</label>
                 <div class="relative">
-                <input id="courseName" class="mb-[5px] text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Saad" type="text" />
+                <select id="courseName" class="w-full text-gray-600 focus:outline-none focus:borde font-normal h-10 flex items-center pl-3 text-sm border-gray-300 rounded border cursor-pointer">
+                    <option value="Web and Mobile Development">Web and Mobile Development</option>
+                    <option value="Graphic Designing">Graphic Designing</option>
+                    <option value="Aritificial Intelligencie">Aritificial Intelligencie</option>
+                    <option value="CCNA">CCNA</option>
+                </select>
                 </div>
                 <label for="email2" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Tutor</label>
                 <div class="relative mb-[5px]">
-                    <input id="tutorName" class=" text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Tutor Name" type="text"/>
+                    <select id="tutorName" class="w-full text-gray-600 focus:outline-none focus:borde font-normal h-10 flex items-center pl-3 text-sm border-gray-300 rounded border cursor-pointer">
+                        <option value="Sir Ghous">Sir Ghous</option>
+                        <option value="Sir Haider Ali">Sir Haider Ali</option>
+                        <option value="Sir Inzamam">Sir Inzamam</option>
+                        <option value="Sir Ishaq Bhojani">Sir Ishaq Bhojani</option>
+                    </select>
                 </div>
                 <label for="expiry" class="mb-[5px] mt-[10px] text-gray-800 font-bold leading-tight tracking-normal text-[18px]">Timing</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="timing" class="text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="time" type="text"/>
+                    <select id="timing" class="w-full text-gray-600 focus:outline-none focus:borde font-normal h-10 flex items-center pl-3 text-sm border-gray-300 rounded border cursor-pointer">
+                        <option value="9am to 11am">9am To 11am</option>
+                        <option value="9am to 11am">9am To 11am</option>
+                        <option value="8am to 10am">8am To 11am</option>
+                        <option value="2am to 4am">2am To 4am</option>
+                    </select>
                 </div>
-                <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Section Name</label>
+                <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Section</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="sectionName" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Section Name" />
+                    <select id="sectionName" class="w-full text-gray-600 focus:outline-none focus:borde font-normal h-10 flex items-center pl-3 text-sm border-gray-300 rounded border cursor-pointer">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
                 </div>
                 <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Batch Number</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="BatchNumber" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="Batch Number" />
+                    <select id="BatchNumber" class="w-full text-gray-600 focus:outline-none focus:borde font-normal h-10 flex items-center pl-3 text-sm border-gray-300 rounded border cursor-pointer">
+                        <option value="9">9</option>
+                    </select>
                 </div>
                 <label for="cvc" class="mb-[5px] mt-[10px] text-gray-800 text-[18px] font-bold leading-tight tracking-normal ">Schedule Of Classes</label>
                 <div class="relative mb-[5px] mt-[5px]">
-                    <input id="scheduleClass" class="mb-[5px]  text-gray-600 focus:outline-none focus:border focus:border-indigo-700 font-normal w-full h-10 flex items-center pl-3 text-sm border-gray-300 rounded border" placeholder="schedule of classes" type="text"/>
+                    <select id="scheduleClass" class="w-full text-gray-600 focus:outline-none focus:borde font-normal h-10 flex items-center pl-3 text-sm border-gray-300 rounded border cursor-pointer">
+                        <option value="Monday">Monday</option>
+                        <option value="Tueday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                    </select>
                 </div>
                 <div class="flex items-center justify-start w-full mt-[20px]">
-                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-8 py-2 text-sm" id="submit">Submit</button>
+                    <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 transition duration-150 ease-in-out hover:bg-white hover:text-black bg-[#8dc63f]  hover:border-[2px] hover:border-[#8dc63f] rounded text-white px-8 py-2 text-sm" id="submit" >Submit</button>
                     <button class="focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-gray-400 ml-3 bg-gray-100 transition duration-150 text-gray-600 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm" onclick="modalHandler()">Cancel</button>
                 </div>
                 <button class="cursor-pointer absolute top-0 right-0 mt-4 mr-5 text-gray-400 hover:text-gray-600 transition duration-150 ease-in-out rounded focus:ring-2 focus:outline-none focus:ring-gray-600" onclick="modalHandler()" aria-label="close modal" role="button">
