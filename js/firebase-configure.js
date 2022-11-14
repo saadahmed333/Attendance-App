@@ -1,7 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
-import { collection, query, where, onSnapshot, getFirestore, addDoc, doc,deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-// import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
+import { collection, query, where, onSnapshot, getFirestore, addDoc, doc,deleteDoc, updateDoc, setDoc } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { getStorage , ref, uploadBytesResumable, getDownloadURL, uploadBytes } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
 
 
@@ -20,6 +19,6 @@ export const db = getFirestore();
 export const auth = getAuth(app);
 export const storage = getStorage(app);
 export {signInWithEmailAndPassword}
-export {onSnapshot,collection, query, where, addDoc ,doc ,deleteDoc ,updateDoc}
+export {onSnapshot,collection, query, where, addDoc ,doc ,deleteDoc ,updateDoc, setDoc}
 export {getStorage, ref, uploadBytesResumable, getDownloadURL, uploadBytes}
 
