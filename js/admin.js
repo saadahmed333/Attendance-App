@@ -70,8 +70,8 @@ function front() {
   const unsubscribe = onSnapshot(q, (querySnapshot) => {
       tBody.innerHTML = ``
       querySnapshot.forEach((doc) => {
-      console.log(doc.data())
-      console.log(doc.id)
+      // console.log(doc.data())
+      // console.log(doc.id)
       tBody.innerHTML += `
             <tr
     class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
@@ -112,3 +112,6 @@ window.deletedCourse = deletedCourse;
 
 
 
+let current = new Date();
+let a = current.toLocaleTimeString();
+console.log(a);

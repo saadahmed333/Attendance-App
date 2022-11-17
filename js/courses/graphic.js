@@ -3,24 +3,25 @@ import {onSnapshot,collection, query, where, db} from "../firebase-configure.js"
 let search = document.getElementById("search");
 let searchBtn = document.getElementById("search-Btn");
 
+let students = document.getElementById("students");
 
 let graphiceBody = document.getElementById("graphice-Body");
-
+let count = 0 ;
 function graphicStudents() {
     const q = query(
         collection(db, 'students'),
         where('coursename', '==', "Graphic Designing"),
       )
       const unsubscribe = onSnapshot(q, (querySnapshot) => {
-        // attendanceBody.innerHTML = ''
         querySnapshot.forEach((doc) => {
           console.log(doc.id)
+          count ++;
           graphiceBody.innerHTML += `
                 <tr
         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
     
         <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
-          ${doc.data().studentname}
+          ${count}${") "}${doc.data().studentname}
         </th>
         <td class="px-6 py-4">
           ${doc.data().studentFather}
@@ -43,6 +44,9 @@ function graphicStudents() {
       </tr>
       `
         })
+        students.innerHTML = `
+        <p class="ml-[50px] text-[20px] font-semibold"><span class="bg-[#8dc63f] p-[10px] text-[25px] font-bold rounded-[50%] text-white">${count}</span> Students</p>
+        `
     })
 }
 graphicStudents();
